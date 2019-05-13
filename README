@@ -1,0 +1,18 @@
+Run the script at the derised frequency, it generates necessary metrics and sends them to graphite endpoint
+USAGE:
+  -ch string
+    	current hour log file (default "/opt/tomcat/logs/localhost_access_log.txt")
+  -endPoint string
+    	graphite endPoint (default "localhost:2003")
+  -ph string
+    	previous hour log file (default "/opt/tomcat/logs/localhost_access_log.txt.1")
+  -prefix string
+    	prefix for graphte metrics (default "None")
+
+
+logParser parses standard appache log, and calculates metrics by tailing log which makes it memory efficient and works on large files
+
+BUILD:
+ go install logParser
+
+
